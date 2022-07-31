@@ -29,8 +29,8 @@ if(isset($_POST['login']) && isset($_POST['password'])){
     <form class="formContainer" action="" method="post">
         <h1>CONNEXION</h1>
         <?php if(isset($_SESSION['message'])){echo $_SESSION['message'];} ?>
-        <p><input type="text" name="login" class="zonetext" id="login" placeholder="Login..."></p>
-        <p><input type="password" name="password" id="password" class="zonetext"  placeholder="Password ..."></p>
+        <p><input type="text" name="login" class="zonetext" id="login" placeholder="Identifiant..."></p>
+        <p><input type="password" name="password" id="password" class="zonetext"  placeholder="Mot de passe..."></p>
         <p style="color:red" id="erreur"></p>
         <p><input type="submit" id="#button" class="boutonvalidation" name="submit" value="Envoyer"></p> 
     </form>
@@ -47,11 +47,11 @@ if(isset($_POST['login']) && isset($_POST['password'])){
             //Vérification si le formulaire n'est pas vide 
             
             if (!password.value){
-                erreur = "Veuillez renseigner votre password";
+                erreur = "Veuillez renseigner votre mot de passe.";
             }
 
             if (!login.value){
-                erreur = "Veuillez renseigner votre Login";
+                erreur = "Veuillez renseigner votre identifiant.";
             }
 
             if(erreur){
@@ -64,6 +64,6 @@ if(isset($_POST['login']) && isset($_POST['password'])){
         })
     </script>
 </main>
-<?php require './requires/footer.php'; ?>
+<?php require './footer.php'; ?>
 </body>
 </html>

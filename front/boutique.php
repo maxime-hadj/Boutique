@@ -62,7 +62,7 @@ $addpanier = $panier->verif();
                                 <input type="submit" name="catégorie" value="Sculptures">
                                 <input type="submit" name="catégorie" value="Suspensions">
                                 <input type="submit" name="catégorie" value="Tables">
-                                <input type="submit" name="catégorie" value="Tabourets">
+                                <!--<input type="submit" name="catégorie" value="Tabourets">-->
                         </form>
             </div>
 
@@ -129,7 +129,7 @@ $addpanier = $panier->verif();
         </div>
 
         
-    <?php var_dump($pages); 
+    <?php //var_dump($pages); 
      require 'footer.php'; ?>
 
 

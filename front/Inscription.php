@@ -15,7 +15,7 @@ if(isset($_POST['login']) && isset($_POST['email']) && isset($_POST['password'])
         $user->Inscription($login, $email, $password);
     }
     else{
-        $message = 'Passwords non-identiques';
+        $message = 'Mots de passe non-identiques.';
     }
 }
 ?>
@@ -38,45 +38,43 @@ if(isset($_POST['login']) && isset($_POST['email']) && isset($_POST['password'])
         <h1>INSCRIPTION</h1>
         <?php echo $message; ?>
         <?php if(isset($_SESSION['message'])){echo $_SESSION['message'];} ?>
-        <p><input type="text" id="login" name="login" class="zonetext" placeholder="Login..."></p>
-        <p><input type="text" id="email" name="email" class="zonetext" placeholder="Mail ..."></p>
-        <p><input type="password" id="password" name="password" class="zonetext" placeholder="Password ..."></p>
-        <p><input type="password" id="password_retype" name="password_retype" class="zonetext"  placeholder="Password Confirmation ..."></p>
+        <p><input type="text" id="login" name="login" class="zonetext" placeholder="Identifiant..."></p>
+        <p><input type="text" id="email" name="email" class="zonetext" placeholder="Email..."></p>
+        <p><input type="password" id="password" name="password" class="zonetext" placeholder="Mot de passe..."></p>
+        <p><input type="password" id="password_retype" name="password_retype" class="zonetext"  placeholder="Confirmez votre mot de passe..."></p>
         <p style="color:red" id="erreur"></p>
         <p><input type="submit" id="#button" class="boutonvalidation" name="submit" value="Envoyer"></p> 
     </form>
-    <a id="lienCo" href="connexion.php">Vous avez déjà un compte? Cliquez ici !</a>
+    <a id="lienCo" href="connexion.php">Vous avez déjà un compte ? Cliquez ici !</a>
     <script type="text/javascript">
         let btnEnvoyer = document.getElementById('#button');
 
         btnEnvoyer.addEventListener("click", function(e) {
-            //récupérer les données du formulaires
             var erreur;
             login = document.querySelector("#login")
             email = document.querySelector("#email")
             password = document.querySelector("#password")
             password_retype = document.querySelector("#password_retype")
-            console.log(login.valeu);
+            //console.log(login.value);
 
-            //Vérification si le formulaire n'est pas vide 
             if (!password_retype.value){
-                erreur = "Veuillez renseigner votre password_retype";
+                erreur = "Veuillez retaper votre mot de passe.";
             }
 
             if (!password.value){
-                erreur = "Veuillez renseigner votre password";
+                erreur = "Veuillez renseigner votre mot de passe.";
             }
 
             if (!email.value){
-                erreur = "Veuillez renseigner votre email";
+                erreur = "Veuillez renseigner votre email.";
             }
             
             if (!login.value){
-                erreur = "Veuillez renseigner votre Login";
+                erreur = "Veuillez renseigner votre login.";
             }
 
             if(password.value != password_retype.value){
-                erreur = "Veuillez rentrer des Passwords indentiques";
+                erreur = "Veuillez rentrer des mots de passe indentiques.";
             }
 
             if(erreur){

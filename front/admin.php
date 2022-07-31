@@ -28,7 +28,7 @@ session_start();
 
     </form>
     <?php 
-    var_dump($_SESSION['user']);
+    //var_dump($_SESSION['user']);
 
     if(empty($_GET['element'])) {
         $_GET['element'] = null;
@@ -63,8 +63,8 @@ session_start();
                       foreach($getDocs as $getDoc){
                       ?>
                       <tr>
-                      <td data-label="Date"><?=$getDoc['id'] ?></td>
-                          <td data-label="Date"><?=$getDoc['titre'] ?></td>
+                      <td data-label="Data"><?=$getDoc['id'] ?></td>
+                          <td data-label="Data"><?=$getDoc['titre'] ?></td>
                           <td> <a href="./admin.php?element=document&amp;modif=<?= $getDoc['id']; ?>">modification</a></td> 
 
                       </tr>
@@ -108,26 +108,24 @@ session_start();
                     <h1>Utilisateurs</h1>
                     <table class="tableau-style">
                     <thead>
-                      <th>id</th>
-                      <th>login</th>
-                      <th>email</th>
-                      <th>droits</th>
-                      <th>lien</th>
-
-                      
-                  </thead>
-                  <tbody>
-                      <?php
-                      foreach($getUsers as $getUser){
-                      ?>
-                      <tr>
-                        <td data-label="Date"><?=$getUser['id'] ?></td>
-                          <td data-label="Date"><?=$getUser['login'] ?></td>
-                          <td data-label="Date"><?=$getUser['email'] ?></td>
-                          <td data-label="Date"><?=$getUser['id_droit'] ?></td>
-                          <td> <a href="./admin.php?element=utilisateurs&amp;modif=<?= $getUser['id']; ?>">modification</a></td> 
-
-                      </tr>
+                        <th>id</th>
+                        <th>login</th>
+                        <th>email</th>
+                        <th>droits</th>
+                        <th>lien</th>
+                    </thead>
+                  
+                    <tbody>
+                        <?php
+                            foreach($getUsers as $getUser){
+                        ?>
+                        <tr>
+                            <td data-label="Data"><?=$getUser['id'] ?></td>
+                            <td data-label="Data"><?=$getUser['login'] ?></td>
+                            <td data-label="Data"><?=$getUser['email'] ?></td>
+                            <td data-label="Data"><?=$getUser['id_droit'] ?></td>
+                            <td> <a href="./admin.php?element=utilisateurs&amp;modif=<?= $getUser['id']; ?>">modification</a></td> 
+                        </tr>
 
                       <?php
                       //var_dump($getDoc);
@@ -200,8 +198,8 @@ session_start();
                       foreach($getProduits as $getProduit){
                       ?>
                       <tr>
-                      <td data-label="Date"><?=$getProduit['id'] ?></td>
-                          <td data-label="Date"><?=$getProduit['titre'] ?></td>
+                      <td data-label="Data"><?=$getProduit['id'] ?></td>
+                          <td data-label="Data"><?=$getProduit['titre'] ?></td>
                           <td> <a href="./admin.php?element=produits&amp;modif=<?= $getProduit['id']; ?>">modification</a></td> 
 
                       </tr>
@@ -324,9 +322,9 @@ session_start();
                      <form action="" method="post" enctype="multipart/form-data">
                     <label for="photo">Choisir une image</label>
                     <input type="file" accept="image/png, image/jpeg, image/webp" name="image">
-                    <input type="radio" name="typeimage" type="checkbox" id="typeimage" value="1">Ceci est une image produit
-                    <input type="radio" name="typeimage" type="checkbox" id="typeimage" value="2">Ceci est une image de mesure
-                    <input type="radio" name="typeimage" type="checkbox" id="typeimage" value="3">Ceci est une mignature
+                    <input type="radio" name="typeimage" type="checkbox" id="typeimage" value="1">Ceci est une image produit.
+                    <input type="radio" name="typeimage" type="checkbox" id="typeimage" value="2">Ceci est une image de mesure.
+                    <input type="radio" name="typeimage" type="checkbox" id="typeimage" value="3">Ceci est une miniature.
                     <button type="submit" name="addimages">Envoyer</button>
                     </form>
 

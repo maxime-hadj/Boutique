@@ -25,7 +25,7 @@ $prod = $produit->getAllProd();
                         <input type="submit" name="catégorie" value="Sculptures">
                         <input type="submit" name="catégorie" value="Suspensions">
                         <input type="submit" name="catégorie" value="Tables">
-                        <input type="submit" name="catégorie" value="Tabourets">
+                        <!--<input type="submit" name="catégorie" value="Tabourets">-->
                 </form>
             <!-- PHOTO  -->
             <div>
@@ -106,7 +106,7 @@ $prod = $produit->getAllProd();
                         <p class="categorieTitre">
                             Sculptures
                         </p>
-                        <img src="./images/sculptures/renard.jpeg" alt="Sculpture">
+                        <img src="./images/sculptures/souris.jpeg" alt="Sculpture">
                     </section>
                 </a>
                 <a href="boutique.php?catégorie=Fauteuils">

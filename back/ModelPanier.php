@@ -38,9 +38,9 @@ class Panier {
                     return array($prods);
 
                     //ajouter message de confirmation.
-                    echo "Porduit a été ajouté au panier";
+                    echo "Le produit a été ajouté au panier.";
                 }else{
-                    echo "Verification failed";
+                    echo "Erreur, veuillez réessayer.";
                 }
                         
         }

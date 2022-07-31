@@ -19,14 +19,14 @@ if(isset($_SESSION["panierPrix"])) {
     $total = 0;
 }
 
-if($total >= 500){
-    $message = "Livraison Gratuite";
+if($total >= 190){
+    $message = "Livraison offerte.";
 }else{
-    $message = "Gratuite à partir de 500 euros d'achats";
+    $message = "Offerte à partir de 190 euros d'achats.";
 }
 
 if(isset($verif)){
-    var_dump($verif);
+    //var_dump($verif);
 }
 
 
@@ -95,17 +95,15 @@ if(isset($_POST["supp"])){
                     ?>
                 <form action="" method="POST">
                     <button type="submit" name="supp" class="supprimer" value="<?= $id_prod?>">
-                        Supprimer Mon Panier
+                        Vider mon panier.
                     </button>
                 </form>
         <?php
         }else{
             ?>
             <h3>
-                Il semble que votre panier traverse une période de grand vide.
-
-                En manque d’inspiration ?
-                <a href="boutique.php">Laissez vous guider</a>
+                Votre panier est vide.
+                <a href="boutique.php">Laissez-vous guider.</a>
             </h3>
             <?php
         }

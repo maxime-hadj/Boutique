@@ -15,15 +15,12 @@ class User extends Model{
             $this->login = $login;
             $this->email = $email;
             $this->password = $password;
-            
-            //connexion à la base de données pour verifier si le login existe deja 
             $requetesql2 = "SELECT login FROM `users` WHERE login = '$this->login'";
             $calcul2 = $this->bdd->prepare($requetesql2);
             $calcul2 -> execute();
-            // rowCount permet de compter le nombre d'utilisateur avec ce login
             $result2 = $calcul2->rowCount();
 
-            // Si aucun utilisateur n'a ce login alors je le rentre ne base 
+            // Si aucun utilisateur n'a ce login alors je le rentre en db
             if(($result2) == 0){
                 $requetesql1 = "INSERT INTO `users` (`login`, `email`, `password`, `id_droit`) VALUES ('$this->login', '$this->email', '$this->password', 1)";
                 $calcul1 = $this->bdd->prepare($requetesql1);

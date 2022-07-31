@@ -120,7 +120,7 @@ class Admin extends Model{
         $getCat->execute();
         $getCatName = $getCat->fetchall(PDO::FETCH_ASSOC);
         return $getCatName;
-        var_dump($getCatName);
+        //var_dump($getCatName);
         }
 
 
