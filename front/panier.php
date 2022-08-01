@@ -118,7 +118,7 @@ if(isset($_POST["supp"])){
                     if(isset($_SESSION['panier'])){
                         if(isset($_SESSION['user'])){
                             echo 'infos.php';
-                        }else{echo 'inscription.php';}
+                        }else{echo 'Inscription.php';}
                     }else{$message_err = "Panier Vide: Veuillez ajouter des articles";}
                     ?>">
                     Paiement
