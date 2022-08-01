@@ -106,7 +106,7 @@ $prod = $produit->getAllProd();
                         <p class="categorieTitre">
                             Sculptures
                         </p>
-                        <img src="./images/sculptures/souris.jpeg" alt="Sculpture">
+                        <img src="./images/sculptures/souris.jpeg" alt="SculptureSouris">
                     </section>
                 </a>
                 <a href="boutique.php?catégorie=Fauteuils">
